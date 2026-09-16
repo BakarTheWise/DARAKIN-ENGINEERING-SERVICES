@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 const Header = () => {
@@ -18,11 +18,7 @@ const Header = () => {
   ]
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : ''
 
     return () => {
       document.body.style.overflow = ''
@@ -31,27 +27,33 @@ const Header = () => {
 
   return (
     <header className="fixed left-0 top-0 z-[9999] w-full bg-[#0A2540] text-[#F5F7FA]">
-      <div className="mx-auto flex h-[73px] max-w-[1600px] items-center justify-between px-6 md:px-10 lg:px-12">
+      <div className="mx-auto flex h-[82px] max-w-[1600px] items-center justify-between px-6 md:px-10 lg:px-12">
 
+        {/* Logo */}
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
-          className="group flex items-center gap-3"
+          className="flex items-center gap-3"
         >
-          <Image
-            src="/hexagon.png"
-            alt="Darakin Engineering logo"
-            width={35}
-            height={35}
-            className="h-8.75 w-8.75 transition-transform duration-300 group-hover:rotate-12"
-          />
+          <div className="border-gray-600 border-2 h-[58px] w-[58px] flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white">
+            <Image
+              src="/darakinLogo.png"
+              alt="Darakin Engineering logo"
+              width={200}
+              height={200}
+              priority
+              quality={100}
+              className="h-[65px] w-[65px] object-contain"
+            />
+          </div>
 
-          <h1 className="font-lato text-lg font-bold tracking-wide sm:text-[16px] hidden lg:block">
+          <h1 className="hidden font-lato text-[16px] font-bold leading-tight tracking-wide lg:block">
             DARAKIN ENGINEERING SERVICES & <br />
             SOLUTIONS LTD.
           </h1>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => {
@@ -63,16 +65,9 @@ const Header = () => {
                     href={link.href}
                     className={`
                       relative font-lato text-sm font-medium
-                      transition-colors duration-200
-
-                      after:absolute
-                      after:-bottom-2
-                      after:left-0
-                      after:h-0.5
-                      after:bg-[#4FD1C5]
-                      after:transition-all
-                      after:duration-300
-
+                      after:absolute after:-bottom-2 after:left-0
+                      after:h-0.5 after:bg-[#4FD1C5]
+                      after:transition-all after:duration-300
                       ${
                         isActive
                           ? 'font-bold text-[#4FD1C5] after:w-full'
@@ -88,6 +83,7 @@ const Header = () => {
           </ul>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
@@ -113,14 +109,14 @@ const Header = () => {
                 h-[2px] w-5
                 rounded-full
                 bg-[#F5F7FA]
-                transition-all duration-300 ease-in-out
-                ${isOpen ? 'top-2.25 rotate-45' : ''}
+                transition-all duration-300
+                ${isOpen ? 'top-2.5 rotate-45' : ''}
               `}
             />
 
             <span
               className={`
-                absolute left-0 top-2.25
+                absolute left-0 top-2.5
                 h-0.5 w-5
                 rounded-full
                 bg-[#F5F7FA]
@@ -135,24 +131,24 @@ const Header = () => {
                 h-0.5 w-5
                 rounded-full
                 bg-[#F5F7FA]
-                transition-all duration-300 ease-in-out
-                ${isOpen ? 'bottom-2.25 -rotate-45' : ''}
+                transition-all duration-300
+                ${isOpen ? 'bottom-2.5 -rotate-45' : ''}
               `}
             />
           </span>
         </button>
       </div>
 
+      {/* Mobile Overlay */}
       <div
         onClick={() => setIsOpen(false)}
         className={`
-          fixed inset-0 top-[73px]
+          fixed inset-0 top-[82px]
           z-40
           bg-black/30
           backdrop-blur-[2px]
           transition-opacity duration-300
           md:hidden
-
           ${
             isOpen
               ? 'pointer-events-auto opacity-100'
@@ -161,6 +157,7 @@ const Header = () => {
         `}
       />
 
+      {/* Mobile Navigation */}
       <nav
         className={`
           absolute left-0 right-0 top-full
@@ -171,10 +168,8 @@ const Header = () => {
           shadow-2xl shadow-black/30
           backdrop-blur-xl
           md:hidden
-
-          transition-all duration-400
+          transition-all duration-300
           ease-[cubic-bezier(0.22,1,0.36,1)]
-
           ${
             isOpen
               ? 'visible max-h-[500px] translate-y-0 opacity-100'
@@ -188,7 +183,6 @@ const Header = () => {
             className={`
               mb-3 text-center
               transition-all duration-300
-
               ${
                 isOpen
                   ? 'translate-y-0 opacity-100'
@@ -210,7 +204,6 @@ const Header = () => {
                   key={link.href}
                   className={`
                     transition-all duration-300 ease-out
-
                     ${
                       isOpen
                         ? 'translate-y-0 opacity-100'
@@ -227,14 +220,11 @@ const Header = () => {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      flex min-h-[54px]
-                      w-full
-                      rounded-xl
-                      px-5
+                      flex min-h-[54px] w-full
+                      rounded-xl px-5
                       font-lato text-base
                       transition-all duration-200
                       active:scale-[0.98]
-
                       ${
                         isActive
                           ? 'bg-[#4FD1C5]/10 font-bold text-[#4FD1C5]'
@@ -245,10 +235,7 @@ const Header = () => {
                     <span className="flex items-center gap-3">
                       <span
                         className={`
-                          h-1.5 w-1.5
-                          rounded-full
-                          transition-all duration-300
-
+                          h-1.5 w-1.5 rounded-full
                           ${
                             isActive
                               ? 'scale-100 bg-[#4FD1C5]'

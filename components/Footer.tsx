@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Hexagon } from "lucide-react";
+import { services } from "@/data/services";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -9,60 +11,38 @@ const quickLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const services = [
-  { label: "Structural Analysis", href: "/services/structural-analysis" },
-  {
-    label: "Infrastructure Planning",
-    href: "/services/infrastructure-planning",
-  },
-  { label: "Civil Engineering", href: "/services/civil-engineering" },
-  {
-    label: "Technical Supervision",
-    href: "/services/technical-supervision",
-  },
-  {
-    label: "Structural Coordination",
-    href: "/services/structural-coordination",
-  },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-[#071B30] font-[Lato,sans-serif] text-[#71839A]">
       <div className="mx-auto max-w-[1600px] px-6 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-12 lg:py-16">
-
-        {/* ================= MAIN FOOTER ================= */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-4 lg:gap-16">
-
-          {/* ================= COMPANY ================= */}
           <div>
-            <Link
-              href="/"
-              className="group mb-5 flex w-fit items-center gap-2"
-            >
-              <Hexagon
-                size={25}
-                strokeWidth={1.8}
-                className="text-white transition-transform duration-300 group-hover:rotate-12"
-              />
+            <Link href="/" className="flex items-center gap-3 mb-3">
+              <div className="border-gray-600 border-2 max-w-fitS flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white">
+                <Image
+                  src="/darakinLogo.png"
+                  alt="Darakin Engineering logo"
+                  width={200}
+                  height={200}
+                  priority
+                  quality={100}
+                  className="h-[40px] w-[40px] object-contain"
+                />
+              </div>
 
-              <span className="text-[18px] font-semibold tracking-[-0.3px] text-white sm:text-[19px]">
-                DARAKIN ENGINEERING SERVICES &
-                SOLUTIONS LTD.
-              </span>
+              <h1 className="font-lato text-[16px] font-bold leading-tight tracking-wide">
+                DARAKIN ENGINEERING SERVICES & SOLUTIONS LTD.
+              </h1>
             </Link>
 
             <p className="max-w-[380px] text-[14px] leading-[1.7]">
-              Delivering precise structural, infrastructural, and
-              administrative engineering services across the globe. Built on
-              a foundation of safety and absolute performance.
+              Delivering precise structural, infrastructural, and administrative
+              engineering services across the globe. Built on a foundation of
+              safety and absolute performance.
             </p>
           </div>
 
-          {/* ================= LINKS + SERVICES ================= */}
           <div className="grid grid-cols-2 gap-6 lg:col-span-2 lg:grid-cols-2 lg:gap-16">
-
-            {/* Quick Links */}
             <div>
               <h3 className="mb-4 text-[14px] font-semibold text-white sm:mb-5">
                 Quick Links
@@ -87,14 +67,13 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Services */}
             <div>
               <h3 className="mb-4 text-[14px] font-semibold text-white sm:mb-5">
                 Services
               </h3>
 
               <ul className="space-y-1">
-                {services.map((service) => (
+                {Object.values(services).map((service) => (
                   <li key={service.label}>
                     <Link
                       href={service.href}
@@ -113,7 +92,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ================= CONTACT ================= */}
           <div>
             <h3 className="mb-4 text-[14px] font-semibold text-white sm:mb-5">
               Contact Info
@@ -140,10 +118,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ================= DIVIDER ================= */}
         <div className="mt-12 border-t border-[#1D3043] sm:mt-14 lg:mt-16" />
 
-        {/* ================= BOTTOM FOOTER ================= */}
         <div
           className="
             flex flex-col gap-5

@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 const ProjectsPage = () => {
 
@@ -12,7 +11,7 @@ const ProjectsPage = () => {
     description:
       "Condition survey and structural capacity assessment of an existing industrial warehouse complex facing change of use and new loading conditions. Darakin delivered clear remediation recommendations that allowed the client to plan works with known scopes and risk.",
     image: "/section_11_img.png",
-    href: "#",
+    href: "https://www.youtube.com/",
   },
   {
     category: "TECHNICAL SUPPORT & ADVISORY",
@@ -20,7 +19,7 @@ const ProjectsPage = () => {
     description:
       "Independent technical review and design verification for a water distribution extension. The work supported the client’s funding and procurement process by providing an objective view of design adequacy and residual risks.",
     image: "/section_12_img.png",
-    href: "#",
+    href: "https://www.youtube.com/",
   },
   {
     category: "MULTI-DISCIPLINARY COORDINATION",
@@ -28,7 +27,7 @@ const ProjectsPage = () => {
     description:
       "Civil engineering lead for site infrastructure (roads, drainage, utilities) on a mixed-use development. Darakin coordinated interfaces with architectural, structural and MEP teams through detailed design and tender, reducing clashes and clarifying responsibilities before construction.",
     image: "/section_13_img.png",
-    href: "#",
+    href: "https://www.youtube.com/",
   },
 ];
   return (
@@ -89,8 +88,9 @@ const ProjectsPage = () => {
               move from risk assessment to deliverable works.
             </p>
             <Link
-              href="#"
+              href="https://www.youtube.com/"
               className="inline-flex items-center justify-center gap-2 font-semibold text-white"
+              target='_blank'
             >
               <span>View Case Study Details</span>
               <ArrowRight />
@@ -115,8 +115,9 @@ const ProjectsPage = () => {
             from risk assessment to deliverable works.
           </p>
           <Link
-            href="#"
+            href="https://www.youtube.com/"
             className="inline-flex items-center gap-2 font-semibold text-[#1A4A7A] hover:underline"
+            target='_blank'
           >
             <span>View Case Study Details</span>
             <ArrowRight />
@@ -142,8 +143,9 @@ const ProjectsPage = () => {
             from risk assessment to deliverable works.
           </p>
           <Link
-            href="#"
+            href="https://www.youtube.com/"
             className="inline-flex items-center gap-2 font-semibold text-[#1A4A7A] hover:underline"
+            target='_blank'
           >
             <span>View Case Study Details</span>
             <ArrowRight />
@@ -173,8 +175,9 @@ const ProjectsPage = () => {
               move from risk assessment to deliverable works.
             </p>
             <Link
-              href="#"
+              href="https://www.youtube.com/"
               className="inline-flex items-center justify-center gap-2 font-semibold text-white hover:underline"
+              target='_blank'
             >
               <span>View Case Study Details</span>
               <ArrowRight />
@@ -227,6 +230,7 @@ const ProjectsPage = () => {
                   <Link
                     href={project.href}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition-colors hover:text-blue-800"
+                    target='_blank'
                   >
                     View Case Study Details
 
