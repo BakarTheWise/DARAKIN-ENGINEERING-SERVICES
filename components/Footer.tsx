@@ -98,9 +98,15 @@ export default function Footer() {
             </h3>
 
             <address className="not-italic text-[14px] leading-[1.8]">
-              <p>100 Innovation Parkway, Suite 500</p>
-              <p>Wuse 2, Abuja.</p>
+              <h2 className="text-gray-300">Registered Office Address:</h2>
+              <p>Tpumpy Estate Phase 12</p>
+              <p>Plot 01, Abuja.</p>
 
+              <h2 className="text-gray-300">Corporate Credentials:</h2>
+              <p>COREN Registered</p>
+              <p>CAC Registration No. —Rc 9799739</p>
+
+              <h2 className="text-gray-300">E-mail:</h2>
               <a
                 href="mailto:info@darakinengineering.com"
                 className="mt-1 block w-fit transition-colors duration-200 hover:text-white"
@@ -108,12 +114,17 @@ export default function Footer() {
                 info@darakinengineering.com
               </a>
 
-              <a
-                href="tel:+2345513214567"
+              <h2 className="text-gray-300">Phone Nummbers:</h2>
+              <p
                 className="block w-fit transition-colors duration-200 hover:text-white"
               >
-                +234 551 321 4567
-              </a>
+                +234 806 385 2947
+              </p>
+              <p
+                className="block w-fit transition-colors duration-200 hover:text-white"
+              >
+                +234 806 385 2947
+              </p>
             </address>
           </div>
         </div>
