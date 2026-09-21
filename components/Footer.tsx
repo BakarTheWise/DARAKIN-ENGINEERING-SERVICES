@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Hexagon } from "lucide-react";
 import { services } from "@/data/services";
 import Image from "next/image";
 
