@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: "Engineering Projects",
+  description:
+    "See examples of Darakin Engineering's work in structural assessment, water infrastructure due diligence, civil coordination, and drainage design.",
+};
 
 const ProjectsPage = () => {
 

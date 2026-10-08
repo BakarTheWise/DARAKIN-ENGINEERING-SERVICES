@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image"
 import {
   Shield,
@@ -6,6 +7,12 @@ import {
   CircleCheck,
   Activity,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Darakin Engineering",
+  description:
+    "Learn about Darakin Engineering's mission, values, and approach to clear, reliable civil engineering advice for infrastructure and built-environment projects.",
+};
 
 const AboutPage = () => {
 

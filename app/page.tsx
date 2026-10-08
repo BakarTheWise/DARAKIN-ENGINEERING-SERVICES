@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Building,
   ClipboardList,
@@ -10,6 +11,12 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Civil & Structural Engineering Solutions",
+  description:
+    "Darakin Engineering delivers civil and structural expertise, infrastructure advice, and practical project support from planning through construction.",
+};
 
 const Page = () => {
   const servicesOverview = [

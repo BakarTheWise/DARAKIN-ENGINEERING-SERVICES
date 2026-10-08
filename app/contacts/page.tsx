@@ -611,7 +611,14 @@
 
 
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import ContactsPage from "./ContactsPage";
+
+export const metadata: Metadata = {
+  title: "Contact Darakin Engineering",
+  description:
+    "Discuss your civil engineering, infrastructure, design review, or construction support needs with the Darakin Engineering team.",
+};
 
 export default function Page() {
   return (

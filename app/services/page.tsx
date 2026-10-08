@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from 'next/image'
 import {
   Building2,
@@ -6,6 +7,12 @@ import {
   Network,
   TriangleAlert,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Engineering Services",
+  description:
+    "Explore Darakin Engineering's civil and structural design, infrastructure advisory, technical project support, and multidisciplinary coordination services.",
+};
 
 const ServicesPage = () => {
   const services = [
