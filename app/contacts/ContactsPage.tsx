@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: "phone",
     label: "PHONE SUPPORT",
-    title: "+234 801 234 5678",
+    title: "+234 806 221 0702",
     description:
       "Call our headquarters directly Monday to Friday, 8:00 AM to 5:00 PM WAT.",
   },
@@ -37,10 +37,10 @@ const contactInfo = [
   },
   {
     icon: "location",
-    label: "LAGOS HEADQUARTERS",
-    title: "14 Engineering Close",
+    label: "ABUJA HEADQUARTERS",
+    title: "Tpumpy Estate Phase 12",
     description:
-      "Victoria Island, Lagos, Nigeria. Book ahead for formal boardroom presentations or design audits.",
+      "Plot 01, Abuja, Nigeria. Book ahead for formal boardroom presentations or design audits.",
   },
 ];
 

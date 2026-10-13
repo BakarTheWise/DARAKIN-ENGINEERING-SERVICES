@@ -117,7 +117,7 @@ export default function Footer() {
               <p
                 className="block w-fit transition-colors duration-200 hover:text-white"
               >
-                +234 806 385 2947
+                +234 806 221 0702
               </p>
               <p
                 className="block w-fit transition-colors duration-200 hover:text-white"
