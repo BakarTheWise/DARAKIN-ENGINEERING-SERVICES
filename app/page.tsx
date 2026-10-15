@@ -206,7 +206,7 @@ const Page = () => {
           {/* Mobile background image */}
           <div className="absolute inset-0 lg:hidden">
             <Image
-              src="/section_2_img.png"
+              src="/darakin-profile-building-construction.jpg"
               alt=""
               fill
               className="object-cover"
@@ -233,10 +233,10 @@ const Page = () => {
           {/* Desktop image */}
           <div className="relative z-10 hidden flex-1 lg:block mt-6">
             <Image
-              src="/section_2_img.png"
-              alt="construction workers at site"
-              width={560}
-              height={300}
+              src="/darakin-profile-building-construction.jpg"
+              alt="Building construction underway with workers on site"
+              width={1280}
+              height={576}
               className="h-[420px] w-full object-cover rounded-[90px] rounded-tr-none"
             />
           </div>
@@ -390,7 +390,7 @@ const Page = () => {
           {/* Mobile backdrop */}
           <div className="absolute inset-0 lg:hidden">
             <Image
-              src="/section_5_img.png"
+              src="/darakin-profile-structural-deck.jpg"
               alt=""
               fill
               className="object-cover"
@@ -403,10 +403,10 @@ const Page = () => {
           {/* Image — Desktop */}
           <div className="relative hidden flex-1 lg:block my-20 ">
             <Image
-              src="/section_5_img.png"
-              alt="Construction workers finalizing a project"
-              width={500}
-              height={340}
+              src="/darakin-profile-structural-deck.jpg"
+              alt="Reinforcement and structural deck preparation at a building site"
+              width={768}
+              height={768}
               className="h-[500px] w-full object-cover rounded-[70px]"
             />
           </div>

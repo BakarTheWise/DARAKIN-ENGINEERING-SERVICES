@@ -62,7 +62,7 @@ const AboutPage = () => {
       {/* Mobile backdrop */}
       <div className="absolute inset-0 lg:hidden">
         <Image
-          src="/section_6_img.png"
+          src="/darakin-profile-estate-site.jpg"
           alt=""
           fill
           className="object-cover"
@@ -85,10 +85,11 @@ const AboutPage = () => {
       </div>
       <div className="relative z-10 hidden h-[520px] w-[660px] shrink-0 lg:block">
         <Image
-          src="/section_6_img.png"
-          alt="Construction workers planning around a table"
+          src="/darakin-profile-estate-site.jpg"
+          alt="Site engineer at an estate development site"
           fill
           className="rounded-[16px] object-cover"
+          loading="eager"
         />
       </div>
       
@@ -175,7 +176,7 @@ const AboutPage = () => {
           <div
             key={value.title}
             className={`
-              flex flex-col items-center text-center
+              flex flex-col items-center rounded-xl border border-[#D5DEE7] bg-[#E8EDF2] p-6 text-center sm:p-7
               md:items-start md:text-left
               ${index === 4 ? "lg:col-start-2" : ""}
             `}

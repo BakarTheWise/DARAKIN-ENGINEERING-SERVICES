@@ -1,40 +1,39 @@
 import type { Metadata } from "next";
-import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Engineering Projects",
   description:
-    "See examples of Darakin Engineering's work in structural assessment, water infrastructure due diligence, civil coordination, and drainage design.",
+    "Explore Darakin Engineering's civil infrastructure, roadworks, and development project experience.",
 };
 
 const ProjectsPage = () => {
 
   const projects = [
   {
-    category: "STRUCTURAL ANALYSIS",
-    title: "Industrial Facility Structural Assessment",
+    category: "ROAD CONSTRUCTION | SITE DELIVERY",
+    title: "Asphalt Paving in Progress",
     description:
-      "Condition survey and structural capacity assessment of an existing industrial warehouse complex facing change of use and new loading conditions. Darakin delivered clear remediation recommendations that allowed the client to plan works with known scopes and risk.",
-    image: "/section_11_img.png",
-    href: "https://www.youtube.com/@darakinengineering",
+      "A paving crew lays a fresh asphalt strip along an existing route. Darakin's company profile identifies turnkey project management and client-side representation among its engagement models for coordinated site delivery.",
+    image: "/darakin-civil-works.jpg",
+    imageAlt: "Fresh asphalt being laid along a road by a paving crew",
   },
   {
-    category: "TECHNICAL SUPPORT & ADVISORY",
-    title: "Water Supply Network - Technical Due Diligence",
+    category: "CIVIL INFRASTRUCTURE | ROADWORKS",
+    title: "Road Surfacing and Site Coordination",
     description:
-      "Independent technical review and design verification for a water distribution extension. The work supported the client’s funding and procurement process by providing an objective view of design adequacy and residual risks.",
-    image: "/section_12_img.png",
-    href: "https://www.youtube.com/@darakinengineering",
+      "Road crews and paving equipment work along a developing route. Darakin's profile lists project management and client-side representation as ways it supports civil infrastructure delivery.",
+    image: "/darakin-road-construction.jpeg",
+    imageAlt: "Road crew and paving equipment working on a developing route",
   },
   {
-    category: "MULTI-DISCIPLINARY COORDINATION",
-    title: "Mixed-Use Development - Civil Coordination",
+    category: "REAL ESTATE DEVELOPMENT | CIVIL & STRUCTURAL",
+    title: "Building Development and Project Coordination",
     description:
-      "Civil engineering lead for site infrastructure (roads, drainage, utilities) on a mixed-use development. Darakin coordinated interfaces with architectural, structural and MEP teams through detailed design and tender, reducing clashes and clarifying responsibilities before construction.",
-    image: "/section_13_img.png",
-    href: "https://www.youtube.com/@darakinengineering",
+      "An active building site brings structural, civil, and construction activities together. Darakin's profile describes civil and structural engineering, real estate advisory, project management, and structural design and peer review among its services.",
+    image: "/darakin-site-construction.jpg",
+    imageAlt: "Multi-storey building under construction at a development site",
   },
 ];
   return (
@@ -75,33 +74,27 @@ const ProjectsPage = () => {
     <div className="group mb-8 grid min-h-105 overflow-hidden rounded-2xl bg-white shadow-sm md:grid-cols-2">
       <div
         className="relative min-h-80 bg-cover bg-center md:min-h-105"
-        style={{ backgroundImage: "url('/section_9_img.png')" }}
+        role="img"
+        aria-label="Road paving crew laying asphalt"
+        style={{ backgroundImage: "url('/darakin-road-paving-crew.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30 md:hidden" />
 
         <div className="relative z-10 flex h-full items-center justify-center p-8 text-center md:hidden">
           <div className="max-w-md text-white">
             <h3 className="mb-2 text-lg font-semibold text-white">
-              Civil Engineering & Drainage
+              ROAD INFRASTRUCTURE | PROJECT DELIVERY
             </h3>
             <h2 className="mb-4 text-2xl font-bold text-white">
-              Urban Drainage and Flood Resilience Scheme
+              Asphalt Road Construction
             </h2>
             <p className="mb-6 text-sm leading-6 text-white/90">
-              A multi-phase program to upgrade urban drainage and reduce flood
-              risk. Darakin provided lead civil design and advisory support,
-              including hydraulic modeling input, detailed drainage design and
-              construction-stage technical assistance - helping the client
-              move from risk assessment to deliverable works.
+              Site teams lay and compact asphalt to create a durable road
+              surface. Darakin&apos;s profile identifies turnkey project
+              management and client-side representation among its engagement
+              models, supporting coordinated delivery from site activity to
+              completed works.
             </p>
-            <Link
-              href="https://www.youtube.com/@darakinengineering"
-              className="inline-flex items-center justify-center gap-2 font-semibold text-white"
-              target='_blank'
-            >
-              <span>View Case Study Details</span>
-              <ArrowRight />
-            </Link>
           </div>
         </div>
       </div>
@@ -109,26 +102,18 @@ const ProjectsPage = () => {
       <div className="hidden items-center p-8 md:flex lg:p-12">
         <div>
           <h3 className="mb-2 text-lg font-semibold text-[#1A4A7A]">
-            Civil Engineering & Drainage
+            ROAD INFRASTRUCTURE | PROJECT DELIVERY
           </h3>
           <h2 className="mb-5 text-2xl font-bold text-[#333333] lg:text-3xl">
-            Urban Drainage and Flood Resilience Scheme
+            Asphalt Road Construction
           </h2>
           <p className="mb-6 leading-7 text-[#5A6A7A]">
-            A multi-phase program to upgrade urban drainage and reduce flood
-            risk. Darakin provided lead civil design and advisory support,
-            including hydraulic modeling input, detailed drainage design and
-            construction-stage technical assistance - helping the client move
-            from risk assessment to deliverable works.
+            Site teams lay and compact asphalt to create a durable road
+            surface. Darakin&apos;s profile identifies turnkey project
+            management and client-side representation among its engagement
+            models, supporting coordinated delivery from site activity to
+            completed works.
           </p>
-          <Link
-            href="https://www.youtube.com/@darakinengineering"
-            className="inline-flex items-center gap-2 font-semibold text-[#1A4A7A] hover:underline"
-            target='_blank'
-          >
-            <span>View Case Study Details</span>
-            <ArrowRight />
-          </Link>
         </div>
       </div>
     </div>
@@ -137,58 +122,44 @@ const ProjectsPage = () => {
       <div className="hidden items-center p-8 md:flex lg:p-12">
         <div>
           <h3 className="mb-2 text-lg font-semibold text-[#1A4A7A]">
-            Civil Engineering & Drainage
+            CIVIL INFRASTRUCTURE | COMPLETED WORKS
           </h3>
           <h2 className="mb-5 text-2xl font-bold text-[#333333] lg:text-3xl">
-            Urban Drainage and Flood Resilience Scheme
+            Roadway Delivery for Growing Communities
           </h2>
           <p className="mb-6 leading-7 text-[#5A6A7A]">
-            A multi-phase program to upgrade urban drainage and reduce flood
-            risk. Darakin provided lead civil design and advisory support,
-            including hydraulic modeling input, detailed drainage design and
-            construction-stage technical assistance - helping the client move
-            from risk assessment to deliverable works.
+            A completed paved route demonstrates the practical impact of
+            planned civil works. Darakin works across public infrastructure and
+            commercial development, providing project management, development
+            advisory, and client-side representation to help keep delivery
+            aligned with project requirements.
           </p>
-          <Link
-            href="https://www.youtube.com/@darakinengineering"
-            className="inline-flex items-center gap-2 font-semibold text-[#1A4A7A] hover:underline"
-            target='_blank'
-          >
-            <span>View Case Study Details</span>
-            <ArrowRight />
-          </Link>
         </div>
       </div>
 
       <div
         className="relative min-h-80 bg-cover bg-center md:min-h-105"
-        style={{ backgroundImage: "url('/section_10_img.png')" }}
+        role="img"
+        aria-label="Completed paved road running through a green landscape"
+        style={{ backgroundImage: "url('/darakin-completed-roadway.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30 md:hidden" />
 
         <div className="relative z-10 flex h-full items-center justify-center p-8 text-center md:hidden">
           <div className="max-w-md text-white">
             <h3 className="mb-2 text-lg font-semibold text-white">
-              Civil Engineering & Drainage
+              CIVIL INFRASTRUCTURE | COMPLETED WORKS
             </h3>
             <h2 className="mb-4 text-2xl font-bold text-white">
-              Urban Drainage and Flood Resilience Scheme
+              Roadway Delivery for Growing Communities
             </h2>
             <p className="mb-6 text-sm leading-6 text-white/90">
-              A multi-phase program to upgrade urban drainage and reduce flood
-              risk. Darakin provided lead civil design and advisory support,
-              including hydraulic modeling input, detailed drainage design and
-              construction-stage technical assistance - helping the client
-              move from risk assessment to deliverable works.
+              A completed paved route demonstrates the practical impact of
+              planned civil works. Darakin works across public infrastructure
+              and commercial development, providing project management,
+              development advisory, and client-side representation to help keep
+              delivery aligned with project requirements.
             </p>
-            <Link
-              href="https://www.youtube.com/"
-              className="inline-flex items-center justify-center gap-2 font-semibold text-white hover:underline"
-              target='_blank'
-            >
-              <span>View Case Study Details</span>
-              <ArrowRight />
-            </Link>
           </div>
         </div>
       </div>
@@ -208,7 +179,7 @@ const ProjectsPage = () => {
               <div className="relative aspect-[1.55/1] w-full overflow-hidden">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.imageAlt}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
                   sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
@@ -235,11 +206,11 @@ const ProjectsPage = () => {
                 {/* CTA */}
                 <div className="mt-auto pt-7">
                   <Link
-                    href={project.href}
+                    href="/contacts"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-slate-950 transition-colors hover:text-blue-800"
                     target='_blank'
                   >
-                    View Case Study Details
+                    Discuss a Similar Project
 
                     <svg
                       width="18"
