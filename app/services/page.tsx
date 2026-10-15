@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from 'next/image'
+import Link from "next/link";
 import {
   Building2,
   Map,
@@ -133,9 +134,10 @@ const ServicesPage = () => {
       help — and where we cannot.
     </p>
 
-    <button
-      type="button"
+    <Link
+      href="/contacts"
       className="
+        inline-flex items-center justify-center
         mt-8
         rounded-sm
         bg-[#F5F7FA]
@@ -155,7 +157,7 @@ const ServicesPage = () => {
       "
     >
       Discuss Your Project
-    </button>
+    </Link>
 
   </div>
 </section>

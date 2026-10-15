@@ -242,7 +242,7 @@ const ProjectsPage = () => {
           </p>
 
           <Link
-            href="#contact"
+            href="/contacts"
             className="mt-6 inline-flex min-h-12 items-center justify-center rounded-md bg-[#092447] px-8 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-[#061a34] focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
           >
             Request a Capability Overview

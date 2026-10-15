@@ -423,9 +423,10 @@ const Page = () => {
               talk.
             </p>
 
-            <button
-              type="button"
+            <Link
+              href="/contacts"
               className="
+          inline-flex items-center justify-center
           rounded-[4px]
           bg-[#F5F7FA]
           px-8 py-4
@@ -445,7 +446,7 @@ const Page = () => {
         "
             >
               Arrange a Conversation
-            </button>
+            </Link>
           </div>
         </div>
       </section>
